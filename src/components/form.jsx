@@ -39,7 +39,7 @@ function Form() {
   return (
     <>
       {!formularioEnviado ? (
-        <div className="contain-form">
+        <form className="contain-form">
           <h2 className="titles-form title">Reseña de peliculas</h2>
           <h3 className="titles-form subtitle">Deja tu opinion</h3>
           <div className="container form" id="formu">
@@ -53,6 +53,7 @@ function Form() {
                 aria-label="Default select example"
                 value={pelicula}
                 onChange={(e) => setPelicula(e.target.value)}
+                required
               >
                 <option value="">Seleccione una película</option>
                 {movies.map((movie, index) => (
@@ -72,6 +73,7 @@ function Form() {
                 id="nombre"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
+                required
               />
             </div>
             <div className="mb-3">
@@ -84,6 +86,7 @@ function Form() {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
             <div className="mb-3">
@@ -96,6 +99,7 @@ function Form() {
                 rows="3"
                 value={resena}
                 onChange={(e) => setResena(e.target.value)}
+                required
               ></textarea>
             </div>
             <div className="row gx-5">
@@ -117,7 +121,7 @@ function Form() {
               </div>
             </div>
           </div>
-        </div>
+        </form>
       ) : null}
       {formularioEnviado && (
         <div className="review">
