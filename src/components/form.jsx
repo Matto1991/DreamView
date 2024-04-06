@@ -32,7 +32,7 @@ function Form() {
       return;
     }
 
-    // Si todas las validaciones pasan, aquí puedes enviar los datos a tu backend
+   
     alert("Formulario enviado correctamente.");
     setFormularioEnviado(true);
   };

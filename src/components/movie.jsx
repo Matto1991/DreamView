@@ -18,7 +18,7 @@ function Movie({ movie }) {
         alt="Imagen"
         onError={(e) => {
           e.target.onerror = null;
-          e.target.src = "src/assets/notFound.jpeg"; // URL of a default image to show
+          e.target.src = "src/assets/notFound.jpeg"; 
         }}
       />
 

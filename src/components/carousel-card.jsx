@@ -23,27 +23,11 @@ function CarouselCard({ movie }) {
               />
             </div>
             <div className="col-md-8">
-              <div className="card-body card-carou">
+              <div className="card-body card-carou d-none d-md-block">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>
               </div>
               <div className="buttons-carousel">
-                {/*
-                 <div className="trailer-btn-container">
-                  <div className="trailer-btn">
-                    <div className="trailer-btn-background"></div>
-                  </div>
-                  <p>
-                    Ver trailer
-                  </p>
-                </div>
-                <div className="ticket-btn-container">
-                  <div className="ticket-btn">
-                    <div className="ticket-btn-background"></div>
-                  </div>
-                  Dejar reseña
-                </div> 
-                */}
                 <div className="container">
                   <div className="row">
                     <div className="col">
