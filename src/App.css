@@ -312,6 +312,16 @@ background-color: transparent;
     background-repeat: no-repeat;
   }
 
+  .ticket {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 180px;
+    height: 150px;
+    background-image: url(assets/ticket-final.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   .thank{
     font-weight: bold;
     font-size: 32px;
@@ -439,6 +449,9 @@ flex-direction: column;
   #formu {
     width: min-content;
   }
+  #formu2 {
+    width: min-content;
+  }
   .div-reiniciar{
     justify-content: center;
     display: flex;
@@ -454,6 +467,9 @@ flex-direction: column;
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
   #formu {
+    width: 35%;
+  }
+  #formu2 {
     width: 35%;
   }
   .div-reiniciar{

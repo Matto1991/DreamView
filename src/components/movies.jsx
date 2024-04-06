@@ -4,6 +4,7 @@ const MoviePropTypes = PropTypes.shape({
   Title: PropTypes.string.isRequired,
   Description: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
+  Language: PropTypes.string.isRequired,
 });
 
 Movies.propTypes = {
