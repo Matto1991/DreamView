@@ -399,3 +399,42 @@ flex-direction: column;
   height: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 768px) {
+  #formu {
+    width: min-content;
+  }
+  .div-reiniciar{
+    justify-content: center;
+    display: flex;
+    
+  }
+  .button-finalizar{
+    margin: 0;
+  }
+  .button-reiniciar{
+    margin: 0;
+  }
+} 
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  #formu {
+    width: 35%;
+  }
+  .div-reiniciar{
+    justify-content: center;
+    display: flex;
+  }
+  .button-finalizar{
+    margin: 0;
+    padding-left: 3rem;
+  }
+} 
+
+@media screen and (min-width: 1024px) {
+
+  .button-finalizar{
+    
+    padding-left: 3rem;
+  }
+} 

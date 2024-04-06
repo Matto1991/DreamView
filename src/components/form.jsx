@@ -47,12 +47,12 @@ function Form() {
     <>
       {!formularioEnviado ? (
         <form className="contain-form" onSubmit={handleFinalizarClick}>
-          <h2 className="titles-form title">Reseña de peliculas</h2>
-          <h3 className="titles-form subtitle">Deja tu opinion</h3>
+          <h2 className="titles-form title">Reseña de películas</h2>
+          <h3 className="titles-form subtitle">Deja tu opinión</h3>
           <div className="container form" id="formu">
             <div className="mb-3">
               <label htmlFor="pelicula" className="form-label">
-                Seleccione pelicula
+                Seleccione película
               </label>
               <select
                 id="pelicula-options"
@@ -70,31 +70,33 @@ function Form() {
                 ))}
               </select>
             </div>
-            <div className="mb-3">
-              <label htmlFor="nombre" className="form-label">
-                Nombre completo
-              </label>
-              <input
-                type="text"
-                className="form-control form-custom"
-                id="nombre"
-                value={nombre}
-                onChange={(e) => setNombre(e.target.value)}
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                className="form-control form-custom"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+            <div className="row">
+              <div className="col-12 mb-3">
+                <label htmlFor="nombre" className="form-label">
+                  Nombre completo
+                </label>
+                <input
+                  type="text"
+                  className="form-control form-custom"
+                  id="nombre"
+                  value={nombre}
+                  onChange={(e) => setNombre(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="col-12 mb-3">
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="form-control form-custom"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
             </div>
             <div className="mb-3">
               <label htmlFor="resena" className="form-label">
@@ -110,11 +112,17 @@ function Form() {
               ></textarea>
             </div>
             <div className="row gx-5">
-              <div className="col">
+              <div className="col-12 col-md-12 col-lg-6">
                 <div className="mb-3">
                   <button className="button-finalizar" type="submit">
                     Finalizar
                   </button>
+            
+                </div>
+              </div>
+              <div className="col-12 col-md-12 col-lg-6">
+                <div className="mb-3 div-reiniciar">
+             
                   <button
                     type="reset"
                     className="btn btn-primary button-reiniciar"
