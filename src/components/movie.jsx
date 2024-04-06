@@ -2,16 +2,18 @@ import PropTypes from "prop-types";
 
 Movie.propTypes = {
   movie: PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    Title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     Poster: PropTypes.string.isRequired,
+    Language: PropTypes.string.isRequired,
   }).isRequired,
 };
 
 function Movie({ movie }) {
   return (
     <div className="card h-100">
-      <h4>{movie.title}</h4>
+      <h4>{movie.Title}</h4>
+      <p>({movie.Language})</p>
       <img
         src={movie.Poster}
         className="card-img-top"
