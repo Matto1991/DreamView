@@ -8,6 +8,13 @@ function Form() {
   const [resena, setResena] = React.useState("");
   const [formularioEnviado, setFormularioEnviado] = React.useState(false);
 
+  const handleReset = () => {
+    setPelicula("");
+    setNombre("");
+    setEmail("");
+    setResena("");
+  };
+
   const handleFinalizarClick = () => {
     // Validaciones
     if (nombre.length < 4) {
@@ -39,7 +46,7 @@ function Form() {
   return (
     <>
       {!formularioEnviado ? (
-        <form className="contain-form">
+        <form className="contain-form" onSubmit={handleFinalizarClick}>
           <h2 className="titles-form title">Reseña de peliculas</h2>
           <h3 className="titles-form subtitle">Deja tu opinion</h3>
           <div className="container form" id="formu">
@@ -105,15 +112,13 @@ function Form() {
             <div className="row gx-5">
               <div className="col">
                 <div className="mb-3">
-                  <button
-                    className="button-finalizar"
-                    onClick={handleFinalizarClick}
-                  >
+                  <button className="button-finalizar" type="submit">
                     Finalizar
                   </button>
                   <button
                     type="reset"
                     className="btn btn-primary button-reiniciar"
+                    onClick={handleReset}
                   >
                     Reiniciar
                   </button>
