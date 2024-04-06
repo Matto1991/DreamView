@@ -211,6 +211,7 @@ export const movies = [
     ],
   },
   {
+    Trailer: "https://www.youtube.com/watch?v=9GgxinPwAGc",
     Title: "Vikings",
     Year: "2013–",
     Rated: "TV-14",
@@ -241,6 +242,7 @@ export const movies = [
       "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2NTQ2MDA3NF5BMl5BanBnXkFtZTgwODkxMDUxODE@._V1_SY1000_SX1500_AL_.jpg",
       "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxOTQ3NTA5N15BMl5BanBnXkFtZTgwMzExMDUxODE@._V1_SY1000_SX1500_AL_.jpg",
     ],
+   
   },
   {
     Title: "Gotham",
@@ -305,6 +307,7 @@ export const movies = [
     ],
   },
   {
+    Trailer: "https://www.youtube.com/watch?v=xl8zdCY-abw",
     Title: "Narcos",
     Year: "2015–",
     Rated: "TV-MA",
@@ -334,6 +337,7 @@ export const movies = [
       "https://images-na.ssl-images-amazon.com/images/M/MV5BODA1NjAyMTQ3Ml5BMl5BanBnXkFtZTgwNjI1Mzc3OTE@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
       "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NzQ0OTAwNl5BMl5BanBnXkFtZTgwMDAyMzA1OTE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
     ],
+    
   },
   {
     Title: "Breaking Bad",
@@ -462,6 +466,7 @@ export const movies = [
     ],
   },
   {
+    Trailer: "https://www.youtube.com/watch?v=ORa4hPhGrpo",
     ComingSoon: true,
     Title: "Luke Cage",
     Year: "2016–",
@@ -492,6 +497,7 @@ export const movies = [
       "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxMjA3MTQ5Ml5BMl5BanBnXkFtZTgwOTA1NDU4OTE@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
       "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMyNjg5ODYwNF5BMl5BanBnXkFtZTgwMTE1NDU4OTE@._V1_SY1000_CR0,0,1477,1000_AL_.jpg",
     ],
+ 
   },
 ];
 

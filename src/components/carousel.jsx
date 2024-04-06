@@ -46,6 +46,7 @@ function Carousel() {
                     title: movies[movies.length - 1].Title,
                     description: movies[movies.length - 1].Plot,
                     imageSrc: movies[movies.length - 1].Poster,
+                    trailer: movies[movies.length - 1].Trailer,
                   }}
                 />
               </div>
@@ -64,6 +65,7 @@ function Carousel() {
                     title: movies[(movies.length / 2) -1].Title,
                     description: movies[(movies.length/2) -1].Plot,
                     imageSrc: movies[(movies.length/2) -1].Poster,
+                    trailer: movies[(movies.length/2) -1].Trailer,
                   }}
                 />
               </div>
@@ -82,6 +84,7 @@ function Carousel() {
                     title: movies[10].Title,
                     description: movies[10].Plot,
                     imageSrc: movies[10].Poster,
+                    trailer: movies[10].Trailer,
                   }}
                 />
               </div>

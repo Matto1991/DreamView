@@ -83,9 +83,10 @@ margin-right: 15px;
 
 #cartelera{
   background-color: #2A303C;
-  background-image: url(public/pop.png);
+  background-image: url(public/fondoPop.png);
   background-size: auto;
-  background-position: top;
+  background-position-x: right;
+  background-position-y: bottom;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -95,6 +96,31 @@ margin-right: 15px;
   display: flex;
   flex-direction: column;
 }
+
+#container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#container .col-6 {
+  width: calc(20% - 1rem); 
+  margin-bottom: 1rem; 
+}
+
+@media (max-width: 992px) {
+  #container .col-6 {
+    width: calc(20% - 1rem); 
+  }
+}
+
+@media (max-width: 768px) {
+  #container .col-6 {
+    width: calc(50% - 1rem); 
+  }
+}
+
+
 .title-movies{
   color: white; 
   margin-bottom: 2rem;
@@ -120,6 +146,7 @@ margin-right: 15px;
   flex-direction: column;
   display: flex;
   align-items: flex-start;
+  margin-bottom: 10px;
 
 }
 
@@ -133,6 +160,10 @@ margin-right: 15px;
 .card-body a.btn {
   width: 100%; 
 
+}
+
+.movies-row{
+  width: 95%;
 }
 
 
@@ -352,6 +383,7 @@ flex-direction: column;
 }
   .trailer-btn-container, .ticket-btn-container {
     flex-direction: row;
+    color: #ececec;
   }
 
   .trailer-btn {

@@ -24,9 +24,9 @@ function Movies({ movies }) {
       <div id="cartelera">
         <h2 className="title-movies">En cartelera</h2>
         <div id="container">
-          <div className="row gx-5">
+          <div className="row gx-5 movies-row">
             {movies.map((m, idx) => (
-              <div key={idx} className="col-6 col-xl-2">
+              <div key={idx} className="col-6 col-lg-2 col-xl-2">
                 <Movie  movie={m} />
               </div>
             ))}
