@@ -1,0 +1,401 @@
+#root {
+  width: 100%;
+  margin: 0 auto; 
+}
+
+
+.nav-container{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #1C1C1C; 
+  color: #000000;
+}
+
+.navbar-nav .nav-link {
+  color: white; 
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.navbar-brand.logo {
+  width: 200px;
+  height: 40px;
+  background-image: url('public/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  content: '';
+}
+
+.nav-item{
+  margin-right: 10px;
+}
+
+
+/* CSS */
+.button-3 {
+  appearance: none;
+  background-color: #554F95;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.trailer-button{
+margin-right: 15px;
+}
+
+.preview-button{
+  margin-left: 15px;
+  }
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.buttons-carousel{
+  padding: 50px;
+}
+
+#cartelera{
+  background-color: #2A303C;
+  background-image: url(public/pop.png);
+  background-size: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+#container{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.title-movies{
+  color: white; 
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.card{
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+
+.card-img-top {
+  margin-bottom: 0;
+}
+
+.card-text{
+  text-align: left;
+}
+
+.card-body {
+  padding: 0; 
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.card-title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px; 
+  font-size: 69px;
+  font-weight: 200;
+}
+
+.card-body a.btn {
+  width: 100%; 
+
+}
+
+
+
+.btn {
+  background-color: #554F95;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: -webkit-fill-available;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover{
+background-color: #554F95;
+}
+
+.btn:active{
+  background-color: #ececec;
+  }
+
+.titles-form{
+  margin-left: 2rem;
+  color: #fff;
+}
+
+.title{
+ 
+  font-size: 32px;
+  font-weight: bold;
+}
+.subtitle{
+  font-size: 18px;
+}
+
+.form{
+
+  width:35%;
+}
+
+.form-custom{
+  border: 2px solid #554F95;
+}
+
+.form-label{
+  color: #fff;
+  margin-left: 15px;
+}
+
+.contain-form {
+  background-image: url(public/pop.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  background-color: #282828;
+}
+
+.form-control {
+  background-color: transparent;
+  color: #fff;
+  
+}
+
+.form-control:focus{
+  background-color: transparent;
+  color: #fff;
+}
+
+
+.button-finalizar {
+  background-color: transparent;
+  border: 1px solid #554F95;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #fffbfb;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-left: 40px;
+  outline: none;
+  padding: 13px 23px;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.button-reiniciar {
+  font-size: 18px;
+  background-color: transparent;
+  color: #fffbfb;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  width: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  margin-left: 13px;
+}
+
+.button-reiniciar:hover {
+background-color: transparent;
+}
+
+.button-reiniciar:active {
+  background-color: transparent;
+  }
+
+  .review {
+ padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ececec;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;  
+    background-color: #282828;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .star {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 120px;
+    height: 119px;
+    background-image: url(public/star1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .thank{
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  .paragraph{
+    font-size: 23px;
+    opacity: 0.6;
+  }
+  .message{
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+ 
+
+  .carousel-item {
+    position: relative;
+  }
+  
+  .background-image {
+    position: relative;
+    overflow: hidden; /* Para que la tarjeta no se desborde */
+  }
+
+  .car-img {
+    width: 100%;
+    height: auto; /* Ajusta el tamaño de la imagen */
+  }
+  
+  .card-overlay {
+    position: absolute;
+
+    margin-left: 14rem;
+    top: 10%;
+    max-width: 75%;
+  }
+  
+  .card-content {
+    text-align: center;
+    padding: 20px; 
+  }
+
+  .buy{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .card-carou{
+    border: solid;
+    border-color: #554F95;
+    background-color: rgba(217, 217, 217, 0.9);
+    color: black;
+    padding: 15px; 
+  }
+  
+
+  .trailer-button,
+  .preview-button {
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    margin: 0 10px; 
+  }
+  
+.trailer-ticket-buttons-container{
+display: flex;
+flex-direction: column;
+}
+  .trailer-btn-container, .ticket-btn-container {
+    flex-direction: row;
+  }
+
+  .trailer-btn {
+    background-color: #554F95;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    position: relative;
+  }
+  
+  .trailer-btn-background {
+    background-image: url(Next.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 125%;
+    height: 98%;
+    position: absolute;
+    left: -5%;
+}
+
+.ticket-btn {
+  background-color: #554F95;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  position: relative;
+}
+
+.ticket-btn-background {
+  background-image: url("assets/ticket.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 125%;
+  height: 98%;
+  position: absolute;
+  left: -5%;
+}
+  
+
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
