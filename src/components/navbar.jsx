@@ -25,7 +25,7 @@ function Navbar() {
           <a className={`nav-link ${activeLink === 1 ? 'bold' : ''}`} onClick={() => handleLinkClick(1)} href="#cartelera">Cartelera</a>
         </li>
         <li className="nav-item">
-          <a href="#formu" className="button-3">Dejar reseña</a>
+          <a href="#formu" className="button-3">Comprar ticket</a>
         </li>
       </ul>
     </div>

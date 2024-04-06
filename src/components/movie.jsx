@@ -25,7 +25,7 @@ function Movie({ movie }) {
 
       <div className="card-body">
         <a href="#formu" className="btn btn-primary buy">
-          Dejar reseña
+          Comprar ticket
         </a>
       </div>
     </div>
