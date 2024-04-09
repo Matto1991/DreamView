@@ -15,7 +15,7 @@ function CarouselCard({ movie }) {
       <div className="card-content">
         <div className="card mb-3">
           <div className="row g-0">
-            <div className="col-md-4">
+            <div id="imgCarousel" className="col-md-4">
               <img
                 src={imageSrc}
                 className="img-fluid rounded-start"
@@ -23,7 +23,7 @@ function CarouselCard({ movie }) {
               />
             </div>
             <div className="col-md-8">
-              <div className="card-body card-carou">
+              <div id="carousel" className="card-body card-carou">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>
               </div>
@@ -33,7 +33,7 @@ function CarouselCard({ movie }) {
                     <div className="col">
                       <div className="trailer-ticket-buttons-container">
                         <a href={trailer} className="trailer-btn-container" target="_blank">
-                          <div className="trailer-btn">
+                          <div className="trailer-btn icons">
                             <div className="trailer-btn-background"></div>
                           </div>
                           <p>Ver trailer</p>
@@ -43,10 +43,10 @@ function CarouselCard({ movie }) {
                     <div className="col">
                       <a href="#formu" className="trailer-ticket-buttons-container">
                         <div className="ticket-btn-container">
-                          <div className="ticket-btn">
+                          <div className="ticket-btn icons">
                             <div className="ticket-btn-background"></div>
                           </div>
-                          Comprar ticket
+                          <p> Comprar ticket</p>
                         </div>
                       </a>
                     </div>

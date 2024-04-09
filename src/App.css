@@ -463,7 +463,47 @@ flex-direction: column;
   .button-reiniciar{
     margin: 0;
   }
+
+  .card-overlay{
+    margin: 0;
+  }
+  
+
 } 
+
+
+#carousel {
+  display: block; 
+}
+
+#indicators{
+  display: block; 
+}
+
+@media screen and (max-width: 768px) {
+  #carousel {
+    display: none; 
+  }
+  #indicators {
+    display: none; 
+  }
+  .buttons-carousel{
+    padding: 0;
+  }
+
+  #imgCarousel{
+  max-width: 40%;
+  }
+
+  .icons{
+    font-size: 70%;
+  }
+  .card-overlay{
+    left: 30%;
+  }
+}
+
+
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
   #formu {

@@ -9,7 +9,7 @@ function Carousel() {
           className="carousel slide"
           data-bs-ride="carousel"
         >
-          <div className="carousel-indicators">
+          <div id="indicators" className="carousel-indicators">
             <button
               type="button"
               data-bs-target="#carouselExampleCaptions"
