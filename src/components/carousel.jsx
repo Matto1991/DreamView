@@ -32,12 +32,13 @@ function Carousel() {
             ></button>
           </div>
           <div className="carousel-inner">
-            <div className="carousel-item active">
+            <div id="carouselItem" className="carousel-item active">
               <div>
                 <div className="background-image">
                   <img
+            
                     src={movies[movies.length - 1].Images[0]}
-                    className="d-block w-100 car-img"
+                    className="d-block w-100 car-img imgBack"
                     alt="Imagen"
                   />
                 </div>
@@ -56,7 +57,7 @@ function Carousel() {
                 <div className="background-image">
                   <img
                     src={movies[(movies.length/2) -1].Images[0]}
-                    className="d-block w-100 car-img"
+                    className="d-block w-100 car-img imgBack"
                     alt="Imagen"
                   />
                 </div>
@@ -75,7 +76,7 @@ function Carousel() {
                 <div className="background-image">
                   <img
                     src={movies[10].Images[0]}
-                    className="d-block w-100 car-img"
+                    className="d-block w-100 car-img imgBack"
                     alt="Imagen"
                   />
                 </div>

@@ -30,7 +30,7 @@ function CarouselCard({ movie }) {
               <div className="buttons-carousel">
                 <div className="container">
                   <div className="row">
-                    <div className="col">
+                    <div className="col colCarousel">
                       <div className="trailer-ticket-buttons-container">
                         <a href={trailer} className="trailer-btn-container" target="_blank">
                           <div className="trailer-btn icons">
@@ -40,7 +40,7 @@ function CarouselCard({ movie }) {
                         </a>
                       </div>
                     </div>
-                    <div className="col">
+                    <div className="col colCarousel">
                       <a href="#formu" className="trailer-ticket-buttons-container">
                         <div className="ticket-btn-container">
                           <div className="ticket-btn icons">

@@ -349,7 +349,7 @@ background-color: transparent;
 
   .car-img {
     width: 100%;
-    height: auto; /* Ajusta el tamaño de la imagen */
+    height: auto;
   }
   
   .card-overlay {
@@ -445,6 +445,13 @@ flex-direction: column;
   object-fit: cover;
 }
 
+.colCarousel{
+  display: flex;
+}
+.imgBack{
+  filter: blur(6px); 
+}
+
 @media screen and (max-width: 768px) {
   #formu {
     width: min-content;
@@ -477,7 +484,7 @@ flex-direction: column;
 }
 
 #indicators{
-  display: block; 
+  display: flex; 
 }
 
 @media screen and (max-width: 768px) {
@@ -492,7 +499,8 @@ flex-direction: column;
   }
 
   #imgCarousel{
-  max-width: 40%;
+    max-width: 15rem;
+   
   }
 
   .icons{
@@ -500,6 +508,12 @@ flex-direction: column;
   }
   .card-overlay{
     left: 30%;
+  }
+  #carouselItem{
+    height: 25rem;
+  }
+  .imgBack, img{
+    height: 25rem;
   }
 }
 
