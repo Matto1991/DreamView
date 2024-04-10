@@ -32,27 +32,28 @@ function Carousel() {
             ></button>
           </div>
           <div className="carousel-inner">
-            <div id="carouselItem" className="carousel-item active">
+            <div className="carousel-item active carouselItem">
               <div>
                 <div className="background-image">
                   <img
             
-                    src={movies[movies.length - 1].Images[0]}
+                    src={movies[movies.length - 12].Images[0]}
                     className="d-block w-100 car-img imgBack"
                     alt="Imagen"
                   />
                 </div>
                 <CarouselCard
                   movie={{
-                    title: movies[movies.length - 1].Title,
-                    description: movies[movies.length - 1].Plot,
-                    imageSrc: movies[movies.length - 1].Poster,
-                    trailer: movies[movies.length - 1].Trailer,
+                    title: movies[movies.length - 12].Title,
+                    description: movies[movies.length - 12].Plot,
+                    imageSrc: movies[movies.length - 12].Poster,
+                    trailer: movies[movies.length - 12].Trailer,
+                    imdbRating: movies[movies.length - 12].imdbRating,
                   }}
                 />
               </div>
             </div>
-            <div className="carousel-item active">
+            <div className="carousel-item active carouselItem">
               <div>
                 <div className="background-image">
                   <img
@@ -67,11 +68,13 @@ function Carousel() {
                     description: movies[(movies.length/2) -1].Plot,
                     imageSrc: movies[(movies.length/2) -1].Poster,
                     trailer: movies[(movies.length/2) -1].Trailer,
+                    imdbRating: movies[(movies.length/2) -1].imdbRating,
                   }}
                 />
+                
               </div>
             </div>
-            <div className="carousel-item active">
+            <div className="carousel-item active carouselItem">
               <div>
                 <div className="background-image">
                   <img
@@ -86,6 +89,7 @@ function Carousel() {
                     description: movies[10].Plot,
                     imageSrc: movies[10].Poster,
                     trailer: movies[10].Trailer,
+                    imdbRating: movies[10].imdbRating,
                   }}
                 />
               </div>

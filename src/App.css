@@ -95,6 +95,7 @@ margin-right: 15px;
   align-items: center;
   display: flex;
   flex-direction: column;
+
 }
 
 #container .row {
@@ -110,7 +111,7 @@ margin-right: 15px;
 
 @media (max-width: 992px) {
   #container .col-6 {
-    width: calc(20% - 1rem); 
+    --bs-gutter-x: 0;
   }
 }
 
@@ -344,7 +345,7 @@ background-color: transparent;
   
   .background-image {
     position: relative;
-    overflow: hidden; /* Para que la tarjeta no se desborde */
+    overflow: hidden; 
   }
 
   .car-img {
@@ -358,7 +359,33 @@ background-color: transparent;
     margin-left: 14rem;
     top: 10%;
     max-width: 75%;
+ 
   }
+
+  .square {
+    background-color: #554F95;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    margin-top: 2rem;
+    height: 40px;
+    z-index: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+  }
+
+  .square p {
+    margin: 0; 
+    white-space: nowrap;
+  }
+
+.imdb-card{
+  background-color: #554F95;
+  border-radius: 8px;
+  padding: 1rem;
+  align-items: center;
+}
   
   .card-content {
     text-align: center;
@@ -452,6 +479,15 @@ flex-direction: column;
   filter: blur(6px); 
 }
 
+.buy-ticket{
+  display: flex;
+  justify-content: center;
+}
+
+.ticket-trailer{
+  margin-top: 5px;
+}
+
 @media screen and (max-width: 768px) {
   #formu {
     width: min-content;
@@ -475,6 +511,18 @@ flex-direction: column;
     margin: 0;
   }
   
+  .square {
+    background-color: #554F95;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 4rem;
+    height: 30px;
+    z-index: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+  }
 
 } 
 
@@ -488,6 +536,9 @@ flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {
+  #destacadas{
+    height: 30rem;
+  }
   #carousel {
     display: none; 
   }
@@ -502,18 +553,23 @@ flex-direction: column;
     max-width: 15rem;
    
   }
-
+.background-image{
+  margin-top: 3rem;
+  height: 27rem;
+}
   .icons{
     font-size: 70%;
   }
   .card-overlay{
     left: 30%;
+    margin-top: 2rem;
+    left: 2rem;
   }
-  #carouselItem{
-    height: 25rem;
+  .carouselItem{
+    height: 30rem;
   }
   .imgBack, img{
-    height: 25rem;
+    height: 27rem;
   }
 }
 
