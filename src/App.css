@@ -373,6 +373,7 @@ background-color: transparent;
     display: flex;
     justify-content: center; 
     align-items: center;    
+    border-radius: 10px;
   }
 
   .square p {
@@ -381,10 +382,13 @@ background-color: transparent;
   }
 
 .imdb-card{
+  position: relative;
   background-color: #554F95;
   border-radius: 8px;
   padding: 1rem;
   align-items: center;
+  bottom: 1rem;
+    
 }
   
   .card-content {
@@ -464,8 +468,6 @@ flex-direction: column;
   left: -5%;
 }
   
-
-
 .card-img-top {
   width: 100%;
   height: 100%;
@@ -488,7 +490,31 @@ flex-direction: column;
   margin-top: 5px;
 }
 
+#carousel {
+  display: block; 
+}
+
+#indicators{
+  display: flex; 
+}
+
+.img-inside-carousel{
+  position: relative;
+  left: 1rem;
+  border-radius: 10px;
+  bottom: 1rem;
+}
 @media screen and (max-width: 768px) {
+  .ticket-btn-container-nav{
+    display: flex !important;
+  }
+  .imdb-card{
+    position: relative;
+    bottom: 1rem;
+    padding: 8px;
+    width: 4rem;
+    font-size: 12px;
+  }
   #formu {
     width: min-content;
   }
@@ -497,14 +523,14 @@ flex-direction: column;
   }
   .div-reiniciar{
     justify-content: center;
-    display: flex;
-    
+
   }
   .button-finalizar{
     margin: 0;
   }
   .button-reiniciar{
-    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .card-overlay{
@@ -527,15 +553,12 @@ flex-direction: column;
 } 
 
 
-#carousel {
-  display: block; 
-}
-
-#indicators{
-  display: flex; 
-}
 
 @media screen and (max-width: 768px) {
+  .navbar-toggler-icon{
+    display: none;
+  }
+ 
   #destacadas{
     height: 30rem;
   }
@@ -551,8 +574,10 @@ flex-direction: column;
 
   #imgCarousel{
     max-width: 15rem;
+ 
    
   }
+
 .background-image{
   margin-top: 3rem;
   height: 27rem;
@@ -576,6 +601,9 @@ flex-direction: column;
 
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
+  .ticket-btn-container-nav{
+    display: none !important;
+  }
   #formu {
     width: 35%;
   }
@@ -590,12 +618,13 @@ flex-direction: column;
     margin: 0;
     padding-left: 3rem;
   }
+ 
 } 
 
 @media screen and (min-width: 1024px) {
 
-  .button-finalizar{
-    
+  .button-finalizar{  
     padding-left: 3rem;
   }
+  
 } 

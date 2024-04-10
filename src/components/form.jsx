@@ -10,9 +10,7 @@ function Form() {
   const [telefono, setTelefono] = React.useState("");
   const [finalmsg, setFinalmsg] = React.useState("");
 
-   const [step, setStep] = React.useState(0); 
-   
-
+  const [step, setStep] = React.useState(0);
 
   const handleReset = () => {
     setPelicula("");
@@ -21,7 +19,6 @@ function Form() {
   };
 
   const handleFinalizarClick = () => {
-    
     if (!pelicula) {
       alert("Por favor seleccione una película.");
       return;
@@ -37,32 +34,28 @@ function Form() {
       return;
     }
 
-        setStep(1);
-
+    setStep(1);
   };
 
-   
-   const validateEmail = (email) => {
+  const validateEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   };
   const formatFuncion = (funcion) => {
-
     const regex = /(\d{1,2}\/\d{1,2}\/\d{4})\s(\d{1,2}:\d{2})/;
-  
+
     const matches = funcion.match(regex);
-  
+
     if (matches && matches.length === 3) {
-      const fecha = matches[1]; // Obtener la fecha
-      const hora = matches[2];  // Obtener la hora
-      
+      const fecha = matches[1];
+      const hora = matches[2];
+
       const fechaYHora = { fecha, hora };
-  
+
       setFuncion(fechaYHora);
-  
+
       return fechaYHora;
     } else {
-
       console.error("Formato de fecha y hora incorrecto.");
       return null;
     }
@@ -83,36 +76,36 @@ function Form() {
       return;
     }
 
- setStep(2);
-  const {fecha, hora} = formatFuncion(funcion)
-  
-  setFinalmsg("Tu entrada para la función " + fecha + " a las " + hora);
+    setStep(2);
+    const { fecha, hora } = formatFuncion(funcion);
+
+    setFinalmsg("Tu entrada para la función " + fecha + " a las " + hora);
   };
 
-   const validatePhone = (phone) => {
+  const validatePhone = (phone) => {
     const re = /^\d{3}-\d{3}-\d{3}$/;
     return re.test(phone);
   };
-  
+
   const formatPhoneNumber = (value) => {
     const phoneNumber = value.replace(/\D/g, "");
-    const formattedPhoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{3})/, "$1-$2-$3");
+    const formattedPhoneNumber = phoneNumber.replace(
+      /(\d{3})(\d{3})(\d{3})/,
+      "$1-$2-$3"
+    );
     return formattedPhoneNumber;
   };
-  
+
   const handleTelefonoChange = (e) => {
     const inputValue = e.target.value;
     const formattedValue = formatPhoneNumber(inputValue);
     setTelefono(formattedValue);
   };
-  
-  
-
 
   return (
     <>
-     
-        {step === 0 ? <form className="contain-form" onSubmit={handleFinalizarClick}>
+      {step === 0 ? (
+        <form className="contain-form" onSubmit={handleFinalizarClick}>
           <h2 className="titles-form title">Comprar ticket</h2>
           <h3 className="titles-form subtitle">Seleccione una función</h3>
           <div className="container form" id="formu">
@@ -156,7 +149,6 @@ function Form() {
                 <option value="26/10/2023 18:00">26/10/2023 18:00</option>
                 <option value="27/10/2023 19:00">27/10/2023 19:00</option>
                 <option value="28/10/2023 22:00">28/10/2023 22:00</option>
-
               </select>
             </div>
             <div className="mb-3">
@@ -172,17 +164,16 @@ function Form() {
                 required
               >
                 <option value="">Seleccione un asiento</option>
-                <option type value="Fila 1 - Asiento 1">Fila 1 - Asiento 1</option>
+                <option type value="Fila 1 - Asiento 1">
+                  Fila 1 - Asiento 1
+                </option>
                 <option value="Fila 1 - Asiento 2">Fila 1 - Asiento 2</option>
                 <option value="Fila 1 - Asiento 3">Fila 1 - Asiento 3</option>
                 <option value="Fila 3 - Asiento 4">Fila 3 - Asiento 4</option>
                 <option value="Fila 3 - Asiento 9">Fila 3 - Asiento 9</option>
                 <option value="Fila 5 - Asiento 10">Fila 5 - Asiento 10</option>
               </select>
-              
             </div>
-
-          
 
             <div className="row gx-5">
               <div className="col-12 col-md-12 col-lg-6">
@@ -193,7 +184,7 @@ function Form() {
                 </div>
               </div>
               <div className="col-12 col-md-12 col-lg-6">
-                <div className="mb-3 buttton-reiniciar">
+                <div className="mb-3 button-reiniciar">
                   <button
                     type="reset"
                     className="btn btn-primary button-reiniciar"
@@ -205,99 +196,92 @@ function Form() {
               </div>
             </div>
           </div>
-        </form>:null}
-    
-   
-  {step === 1 ?<form className="contain-form" onSubmit={handleFinalizarClick2}>
-    <h2 className="titles-form title">Comprar ticket</h2>
-    <h3 className="titles-form subtitle">
-      Completa tu información personal
-    </h3>
-    <div className="container form" id="formu2">
-      <div className="mb-3">
-        <label htmlFor="nombre2" className="form-label">
-          Nombre
-        </label>
-        <input
-          type="text"
-          className="form-select form-custom form-control"
-          id="nombre2"
-          placeholder="Ingrese su nombre"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="email2" className="form-label">
-          Email
-        </label>
-        <input
-          type="email"
-          className="form-select form-custom form-control"
-          id="email2"
-          placeholder="Ingrese su email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="telefono" className="form-label">
-          Teléfono
-        </label>
-        <input
-          type="tel"
-          className="form-select form-custom form-control"
-          id="telefono"
-          placeholder="Ingrese su teléfono"
-          value={telefono}
-          onChange={handleTelefonoChange}
-          required
-        />
-      </div>
-      <div className="row gx-5">
-        <div className="col-12 col-md-12 col-lg-6">
-          <div className="mb-3">
-            <button className="button-finalizar" type="submit">
-              Continuar
-            </button>
+        </form>
+      ) : null}
+
+      {step === 1 ? (
+        <form className="contain-form" onSubmit={handleFinalizarClick2}>
+          <h2 className="titles-form title">Comprar ticket</h2>
+          <h3 className="titles-form subtitle">
+            Completa tu información personal
+          </h3>
+          <div className="container form" id="formu2">
+            <div className="mb-3">
+              <label htmlFor="nombre2" className="form-label">
+                Nombre
+              </label>
+              <input
+                type="text"
+                className="form-select form-custom form-control"
+                id="nombre2"
+                placeholder="Ingrese su nombre"
+                value={nombre}
+                onChange={(e) => setNombre(e.target.value)}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="email2" className="form-label">
+                Email
+              </label>
+              <input
+                type="email"
+                className="form-select form-custom form-control"
+                id="email2"
+                placeholder="Ingrese su email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="telefono" className="form-label">
+                Teléfono
+              </label>
+              <input
+                type="tel"
+                className="form-select form-custom form-control"
+                id="telefono"
+                placeholder="Ingrese su teléfono"
+                value={telefono}
+                onChange={handleTelefonoChange}
+                required
+              />
+            </div>
+            <div className="row gx-5">
+              <div className="col-12 col-md-12 col-lg-6">
+                <div className="mb-3">
+                  <button className="button-finalizar" type="submit">
+                    Continuar
+                  </button>
+                </div>
+              </div>
+              <div className="col-12 col-md-12 col-lg-6">
+                <div className="mb-3 button-reiniciar">
+                  <button
+                    type="reset"
+                    className="btn btn-primary button-reiniciar"
+                    onClick={handleReset}
+                  >
+                    Volver
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+        </form>
+      ) : null}
+
+      {step === 2 ? (
+        <div className="review">
+          <p className="paragraph">Comprar ticket</p>
+          <h4 className="thank">¡Felicitaciones {nombre}!</h4>
+          <a className="ticket" href="#"></a>
+          <p className="message">{finalmsg}</p>
+          <p className="message">ha sido canjeada.</p>
+          <p className="message">Te esperamos</p>
         </div>
-        <div className="col-12 col-md-12 col-lg-6">
-          <div className="mb-3 buttton-reiniciar">
-            <button
-              type="reset"
-              className="btn btn-primary button-reiniciar"
-              onClick={handleReset}
-            >
-              Volver
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>:null}
-
-
-
-  {step === 2 ? 
-   <div className="review">
-   <p className="paragraph">Comprar ticket</p>
-   <h4 className="thank">¡Felicitaciones {nombre}!</h4>
-   <a className="ticket" href="#"></a>
-   <p className="message">
-  {finalmsg}
-   </p>
-   <p className="message">
-   ha sido canjeada.
-   </p>
-   <p className="message">
-   Te esperamos
-   </p>
- </div>:null}
-
-
+      ) : null}
     </>
   );
 }

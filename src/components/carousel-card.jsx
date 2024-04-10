@@ -42,7 +42,7 @@ function CarouselCard({ movie }) {
             <div id="imgCarousel" className="col-md-4">
               <img
                 src={imageSrc}
-                className="img-fluid rounded-start"
+                className="img-fluid rounded-start img-inside-carousel"
                 alt="..."
               />
             </div>

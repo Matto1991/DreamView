@@ -29,6 +29,16 @@ function Navbar() {
         </li>
       </ul>
     </div>
+    <div className="ticket-btn-container-nav d-lg-block">
+        <div className="ticket-btn icons">
+        <a
+                            href="#formu"
+                            className="trailer-ticket-buttons-container"
+                          >
+          <div className="ticket-btn-background"></div>
+          </a>
+        </div>
+      </div>
   </div>
 </nav>
 
