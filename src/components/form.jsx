@@ -47,27 +47,22 @@ function Form() {
     return re.test(email);
   };
   const formatFuncion = (funcion) => {
-    // Expresión regular para buscar el formato de fecha y hora
+
     const regex = /(\d{1,2}\/\d{1,2}\/\d{4})\s(\d{1,2}:\d{2})/;
   
-    // Buscar coincidencias en la cadena
     const matches = funcion.match(regex);
   
-    // Verificar si se encontraron coincidencias
     if (matches && matches.length === 3) {
       const fecha = matches[1]; // Obtener la fecha
       const hora = matches[2];  // Obtener la hora
       
-      // Devolver un objeto con la fecha y la hora
       const fechaYHora = { fecha, hora };
   
-      // Establecer el valor de 'funcion' con el objeto fecha y hora
       setFuncion(fechaYHora);
   
-      // Devolver el objeto fecha y hora
       return fechaYHora;
     } else {
-      // En caso de que no se encuentre el formato esperado
+
       console.error("Formato de fecha y hora incorrecto.");
       return null;
     }
