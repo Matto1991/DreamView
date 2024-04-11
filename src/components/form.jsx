@@ -208,13 +208,12 @@ function Form() {
           <div className="container form" id="formu2">
             <div className="mb-3">
               <label htmlFor="nombre2" className="form-label">
-                Nombre
+                Nombre completo
               </label>
               <input
                 type="text"
-                className="form-select form-custom form-control"
+                className=" form-custom form-control"
                 id="nombre2"
-                placeholder="Ingrese su nombre"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
                 required
@@ -226,9 +225,8 @@ function Form() {
               </label>
               <input
                 type="email"
-                className="form-select form-custom form-control"
+                className="form-custom form-control"
                 id="email2"
-                placeholder="Ingrese su email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -240,9 +238,8 @@ function Form() {
               </label>
               <input
                 type="tel"
-                className="form-select form-custom form-control"
+                className="form-custom form-control"
                 id="telefono"
-                placeholder="Ingrese su teléfono"
                 value={telefono}
                 onChange={handleTelefonoChange}
                 required
