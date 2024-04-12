@@ -9,14 +9,28 @@ function Form() {
   const [email, setEmail] = React.useState("");
   const [telefono, setTelefono] = React.useState("");
   const [finalmsg, setFinalmsg] = React.useState("");
-
+  const [asientosAleatorios, setAsientosAleatorios] = React.useState([]);
   const [step, setStep] = React.useState(0);
-
   const handleReset = () => {
     setPelicula("");
     setFuncion("");
     setAsiento("");
   };
+
+  const generarAsientosAleatorios = () => {
+    const numerosAleatorios = [];
+    for (let i = 0; i < 10; i++) {
+      const fila = Math.floor(Math.random() * 10) + 1;
+      const asiento = Math.floor(Math.random() * 10) + 1;
+      numerosAleatorios.push(`Fila ${fila} - Asiento ${asiento}`);
+    }
+
+    setAsientosAleatorios(numerosAleatorios);
+  };
+
+  React.useEffect(() => {
+    generarAsientosAleatorios();
+  }, []);
 
   const handleFinalizarClick = () => {
     if (!pelicula) {
@@ -143,12 +157,15 @@ function Form() {
               >
                 <option value="">Seleccione una función</option>
                 <option value="30/10/2023 14:00">30/10/2023 14:00</option>
-                <option value="01/11/2023 15:00">01/11/2023 15:00</option>
-                <option value="25/9/2023 16:00">25/9/2023 16:00</option>
-                <option value="02/8/2023 17:00">02/8/2023 17:00</option>
-                <option value="26/10/2023 18:00">26/10/2023 18:00</option>
-                <option value="27/10/2023 19:00">27/10/2023 19:00</option>
-                <option value="28/10/2023 22:00">28/10/2023 22:00</option>
+                <option value="31/10/2023 16:00">31/10/2023 16:00</option>
+                <option value="01/11/2023 18:00">01/11/2023 18:00</option>
+                <option value="02/11/2023 20:00">02/11/2023 20:00</option>
+                <option value="03/11/2023 14:00">03/11/2023 14:00</option>
+                <option value="04/11/2023 16:00">04/11/2023 16:00</option>
+                <option value="05/11/2023 18:00">05/11/2023 18:00</option>
+                <option value="06/11/2023 20:00">06/11/2023 20:00</option>
+                <option value="07/11/2023 14:00">07/11/2023 14:00</option>
+                <option value="08/11/2023 16:00">08/11/2023 16:00</option>
               </select>
             </div>
             <div className="mb-3">
@@ -164,14 +181,12 @@ function Form() {
                 required
               >
                 <option value="">Seleccione un asiento</option>
-                <option type value="Fila 1 - Asiento 1">
-                  Fila 1 - Asiento 1
-                </option>
-                <option value="Fila 1 - Asiento 2">Fila 1 - Asiento 2</option>
-                <option value="Fila 1 - Asiento 3">Fila 1 - Asiento 3</option>
-                <option value="Fila 3 - Asiento 4">Fila 3 - Asiento 4</option>
-                <option value="Fila 3 - Asiento 9">Fila 3 - Asiento 9</option>
-                <option value="Fila 5 - Asiento 10">Fila 5 - Asiento 10</option>
+                {asientosAleatorios.length > 0 &&
+                  asientosAleatorios.map((asiento, index) => (
+                    <option key={index} value={asiento}>
+                      {asiento}
+                    </option>
+                  ))}
               </select>
             </div>
 
